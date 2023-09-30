@@ -21,3 +21,5 @@ console.table([accountId , accountEmail , accountPassword , accountCity])
 */
 
 //console.table : provides the output in the table.
+
+let num1 , num2 , num3 ; 

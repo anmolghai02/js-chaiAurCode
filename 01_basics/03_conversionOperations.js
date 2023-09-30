@@ -37,6 +37,39 @@ console.log(typeof stringNumber);
 //number to string.
 
 
+//********** OPERATION ************
+console.log(2**3); //2 de power
+
+let str1 = "hello"
+let str2 = " hitesh"
+let str3 = str1+str2;
+console.log(str3);
+
+//IMP
+console.log("1"+2+2); //answer 122 
+console.log(1+2+"2"); //answer 32
+//eh rule va
+
+console.log(1+2*5%6);  //answer 5 avega
+//this is less readible -> brackets use kr bodmas nal
+//not in js , it is general.
+
+console.log(+true); //answer 1
+// console.log(true+)  not possible
+console.log(+""); //answer 1
+// console.log(""+);  not possible
+
+
+//prefix and postfix
+let gameCounter = 100
+gameCounte++;
+console.log(gameCounter);
+
+
+
+
+
+
 
 
 
