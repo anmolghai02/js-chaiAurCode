@@ -25,10 +25,15 @@ console.log("Hitesh")
 //symbol -> unique (react vich kaafi usage)
 
 //to see the type of variable -> 
-console.log(typeof age);
+console.log(typeof age);     //es da undefined ave ga. -> reason var nu initialize nai kita.
 console.log(typeof "hitesh");
 console.log(typeof null)  //es da OBJECT VA  (interview)
 console.log(typeof undefined)  //es da undefined he ave ga (interview)
 
+//var jis nu inital nai kita -> undefined
+//null -> object
+//undefined da  undefined.
+
 //NON Primitive
 //object
+ 

@@ -22,4 +22,8 @@ directly data github te. but commit stage push krna pena
 js vich phele code and hun vich difference va
 to use only newer version "use strict";
 
+nonPrimitive vich Number , String , Boolean hege
+primitive number , string , boolean hege
+
+conversion vich type(var) eg_ Boolean(isLogged)
 
