@@ -1,0 +1,25 @@
+txt v/s js extension
+software (interpreter and compiler) vich syntax structure eh file de extenstion dekhda
+te os based the syntax krda.
+
+initally , js da software web browser nal c.  (je c diff to config for general)
+now , software alg ve available va , es lye hun js backend te frontend te ve use hunde. not only frontend in browsers.
+
+assi node js use kra ge (other are deno.js)       -> so download kte va
+es nal assi baar baar browser te nai jva ge.
+
+TERMINAL : 
+    1) node -v nal version of node
+    2) node test.js (filename with extension)  -> will be interpreted .
+                                    (no compiler)
+    3)je koi folder vich va like 01_basics/test.js eda
+
+we used the github code space -> bro ne github te VS use kita
+                    (as github and vs microsoft da othe ve mil jnda)
+directly data github te. but commit stage push krna pena
+
+
+js vich phele code and hun vich difference va
+to use only newer version "use strict";
+
+

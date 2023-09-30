@@ -1,0 +1,26 @@
+MDN doc , for original from ECMAscript .
+
+why different Extensions ?
+with some extension , software(compiler or interpreter) will know what syntax means. 
+
+initially , JS was written on the web browsers and software was not common.
+we will use the NODE js to LEARN JS.
+
+JS is interpreted.
+
+TERMINAL Query :
+1) node -v :: to see node version
+2) node folder_name/file_name.js :: to interpret code.
+
+VARIABLE'S AND CONSTANT'S
+ const keyword for constants.
+ let or var keyword for variables.
+ even without let or var , we can declare variables.
+ (recommended : to use 'let' for variables only)
+
+TO PRINT OUTPUT :
+    console.log(variable_name);
+    console.table([variable1 ,var2 , var3 , ..]);
+        it will print in the table with column names as index and values.
+        in the matrix.
+
