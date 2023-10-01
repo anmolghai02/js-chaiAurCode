@@ -29,22 +29,48 @@ To use only the newer version ,' "use strict"; ' After this only newer version w
 but now majority is newer version.
 
 Primitive Data Types : number , string , boolean ,etc . All with small letter.
-NonPrimitive Data Types : object like inbuilt ojbects : Number ,String , Boolean , etc.
+NonPrimitive Data Types : object like arrays , inbuilt ojbects : Number ,String , Boolean , etc.
                         All with capital letter.
 
 Data Types 
-   in primitive DT : number , string , bigint , boolean , null , undefined , symbol. 
+   in primitive DT (7 types): number , string , bigint , boolean , null , undefined , symbol. 
     null : it is dataType and standlone Value (means it also a data type )
     undefined : variable declared but not initialized with the dataType.
-    symbol : unique (will use in react)
-    *decimals also comes under number.
+    symbol : to make value unique (will use in react)
+    **decimals also comes under number.
+   in non : only object . eg) array, functions.
+
+Primitive data types are call by value.
+NonPrimitive or referenced are call by reference.
+(i know there meaning)
+
+example of symbol : const id = symbol('123');
+                    const anotherId = symbol('123');
+                    here the id's are differnt.
+                    check log(id == anotherId) :: false
+                    same value still different.
+example of bigint : use n at the end
+                    const bignum = 233423424535322n
+
+arrays , object and functions example:
+    const arr = ["shaktiman" , "naagraj" , "doga"];
+    let obj = {    //even without variable , we can use the array only use the {}
+        name : "hitesh" ,
+        age : 22.
+    }   //all objects are declared in the { } braces.
+    const func = fucntions(){    //can be declared without variable.
+        console.log("hello world");
+    }
 
 To check Type : use operator typeof.
     console.log(typeof null)  //o/p OBJECT  (asked in interview)   IMP
     console.log(typeof undefined)  //o/p undefined (interview)
     variable uninitialized will be undefined.
     *you can also use syntax : typeof (score) or typeof score
-
+    for the null : ans you can say that the ecma organisation has setted the rules for scripting languages which js follows. 
+    *for function : it comes function (it is actuallly called function object)
+    // all other non primitive data type -> comes object.
+    
 DATA CONVERSION : syntax : let varA = DataTypeObject(varB)
  1) to number 
     some non convertable's -> will get converted But the value can be NaN or else wrong.
@@ -76,3 +102,8 @@ Operations :
     console.log(+""); //answer 1
     // console.log(""+);  not possible
  4) prefix and postfix 
+
+
+JS is dynamically Typed language (where we don't have to define the type of varaible.)
+All types are assigned at run-time.
+
