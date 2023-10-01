@@ -24,3 +24,55 @@ TO PRINT OUTPUT :
         it will print in the table with column names as index and values.
         in the matrix.
 
+Initally , js syntax / code was different . Developers changes it.
+To use only the newer version ,' "use strict"; ' After this only newer version will work.
+but now majority is newer version.
+
+Primitive Data Types : number , string , boolean ,etc . All with small letter.
+NonPrimitive Data Types : object like inbuilt ojbects : Number ,String , Boolean , etc.
+                        All with capital letter.
+
+Data Types 
+   in primitive DT : number , string , bigint , boolean , null , undefined , symbol. 
+    null : it is dataType and standlone Value (means it also a data type )
+    undefined : variable declared but not initialized with the dataType.
+    symbol : unique (will use in react)
+    *decimals also comes under number.
+
+To check Type : use operator typeof.
+    console.log(typeof null)  //o/p OBJECT  (asked in interview)   IMP
+    console.log(typeof undefined)  //o/p undefined (interview)
+    variable uninitialized will be undefined.
+    *you can also use syntax : typeof (score) or typeof score
+
+DATA CONVERSION : syntax : let varA = DataTypeObject(varB)
+ 1) to number 
+    some non convertable's -> will get converted But the value can be NaN or else wrong.
+    syntax : let var2 = Number(var1);
+    cases) (string & boolean)
+        "33" -> will be number and with value 33
+        "33a" -> number with value NaN
+        true -> 1 and false -> 0
+ 2) to boolean 
+    Syntax : let var2 = Boolean(var1);
+    cases ) (string & number)    
+        "" (empty string) -> false
+        else eg) "hites" -> true
+        for number : for 0 : false
+                     for all other : true     
+ 3)to string
+    for number to string
+    33 -> "33"
+
+Operations :
+ 1)power : 2**3 is 2^3.
+ 2)str concatenation : str3 = str1+str2
+ 3)IMP : 
+    console.log("1"+2+2); //answer 122 
+    console.log(1+2+"2"); //answer 32
+
+    console.log(+true); //answer 1
+    // console.log(true+)  not possible
+    console.log(+""); //answer 1
+    // console.log(""+);  not possible
+ 4) prefix and postfix 
