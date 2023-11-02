@@ -55,14 +55,14 @@ example of bigint : use n at the end
                     const bignum = 233423424535322n
 
 arrays , object and functions example:
-    const arr = ["shaktiman" , "naagraj" , "doga"];
-    let obj = {    //even without variable , we can use the array only use the {}
-        name : "hitesh" ,
-        age : 22.
-    }   //all objects are declared in the { } braces.
-    const func = fucntions(){    //can be declared without variable.
-        console.log("hello world");
-    }
+Array    const arr = ["shaktiman" , "naagraj" , "doga"];
+Object     let obj = {    //even without variable , we can use the array only use the {}
+            name : "hitesh" ,
+            age : 22.
+          }   //all objects are declared in the { } braces.
+Function    const func = fucntions(){    //can be declared without variable.
+                 console.log("hello world");
+            }
 
 To check Type : use operator typeof.
     console.log(typeof null)  //o/p OBJECT  (asked in interview)   IMP
@@ -120,3 +120,4 @@ All js objects inherit properties and methods from a prototype ojbect.
 STRINGS :
 //string de
 //06.js de
+//07.js
