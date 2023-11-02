@@ -1,4 +1,4 @@
-//data use krna difficult
+//date API use krna difficult
 //currently TC39 organisation , working on Temporal API to replace Data API.
 //aajje proporsal va.
 
