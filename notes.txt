@@ -27,3 +27,59 @@ primitive number , string , boolean hege
 
 conversion vich type(var) eg_ Boolean(isLogged)
 
+
+memory in js :      stack and heap are stored in memory (RAM)  -> ram nu general memory kehnde va.
+initally lang like c , es vich memory reserve and free is done by programmer.
+Now time , done like automatic garabage collection is used.
+
+stack memory : primitive value goes here.
+    u get copy of variable defined.
+heap memory : non prim values goes here.
+    u get reference of varaible defined.
+
+sab variables store stack vich he va.(even used for non)
+heap vich non prim 
+The stack is typically used for managing function calls and local variables, while the heap is used for dynamic memory allocation.
+
+stack primarily contains local variables, function call information, and control flow data.
+
+Memory on the heap is not organized in a structured way like the stack ; it consists of scattered memory blocks of varying sizes.
+
++----------------+
+| Stack Frame 1  |  <-- Top of stack
+|----------------|
+| Local Var 1    |
+| Local Var 2    |
+| ...            |
+| Return Address |
++----------------+
+| Stack Frame 2  |
+|----------------|
+| Local Var 1    |
+| Local Var 2    |
+| ...            |
+| Return Address |
++----------------+
+| ...            |
++----------------+
+
+variable va size.
++----------------+
+|   Allocated    |
+|   Memory Block |
+|                |
++----------------+
+|   Allocated    |
+|   Memory Block |
+|                |
++----------------+
+|   ...          |
+|   ...          |
++----------------+
+
+//datatype summary vich ve notes.
+
+
+
+STRINGS :
+

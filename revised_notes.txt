@@ -10,7 +10,7 @@ JS is interpreted.
 
 TERMINAL Query :
 1) node -v :: to see node version
-2) node folder_name/file_name.js :: to interpret code.
+2) node folder_name/file_name.js :: to interpret code.             *****
 
 VARIABLE'S AND CONSTANT'S
  const keyword for constants.
@@ -33,13 +33,15 @@ NonPrimitive Data Types : object like arrays , inbuilt ojbects : Number ,String 
                         All with capital letter.
 
 Data Types 
-   in primitive DT (7 types): number , string , bigint , boolean , null , undefined , symbol. 
+   1)in primitive DT (7 types): number , string , bigint , boolean , null , undefined , symbol. 
+        //Capital first letter for all.
     null : it is dataType and standlone Value (means it also a data type )
     undefined : variable declared but not initialized with the dataType.
     symbol : to make value unique (will use in react)
     **decimals also comes under number.
-   in non : only object . eg) array, functions.
+   2)in non-pri DT : only object . eg) array, functions.
 
+(difference b/w primi and non primi)   ->diff is how stored in memory and accessed.
 Primitive data types are call by value.
 NonPrimitive or referenced are call by reference.
 (i know there meaning)
@@ -68,9 +70,9 @@ To check Type : use operator typeof.
     variable uninitialized will be undefined.
     *you can also use syntax : typeof (score) or typeof score
     for the null : ans you can say that the ecma organisation has setted the rules for scripting languages which js follows. 
-    *for function : it comes function (it is actuallly called function object)
+    *for function : it comes function (it is actually called function object)
     // all other non primitive data type -> comes object.
-    
+
 DATA CONVERSION : syntax : let varA = DataTypeObject(varB)
  1) to number 
     some non convertable's -> will get converted But the value can be NaN or else wrong.
@@ -103,7 +105,14 @@ Operations :
     // console.log(""+);  not possible
  4) prefix and postfix 
 
-
 JS is dynamically Typed language (where we don't have to define the type of varaible.)
 All types are assigned at run-time.
 
+How memory work in the JS?
+stack(all primitive)   Heap(non primitive)
+if stack is used then the copy is provided.(not original)
+if Heap is used then the original/reference is provided(change will reflect in it)
+*to see this check 04A_dataType_summary.js
+**variable of non primitive DT is still in the stack. But memory is in the HEAP.
+
+STRINGS :
