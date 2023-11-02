@@ -115,4 +115,8 @@ if Heap is used then the original/reference is provided(change will reflect in i
 *to see this check 04A_dataType_summary.js
 **variable of non primitive DT is still in the stack. But memory is in the HEAP.
 
+All js objects inherit properties and methods from a prototype ojbect.
+
 STRINGS :
+//string de
+//06.js de
