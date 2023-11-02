@@ -83,3 +83,17 @@ variable va size.
 
 STRINGS :
 
+
+
+
+//03_objects : 
+je outside define kita va then
+to use that inside ojbect use the [] with it
+other wise it is differnet          (interview question)
+eg const mysym = Symbol("key1")
+in object {
+    mysym :  "hello"
+}
+
+log(typeof obj.mysym) : will be string not the symbol
+
