@@ -19,4 +19,31 @@ console.log("outer a: ",a);  //o/p : 300
 //global scope in IDE with node and in console -> are different.
 
 
+//nested scope
+function one(){     //nested function
+    const username = "hitesh"
+    function two(){
+        const website = "utube"
+        console.log(username);        //valid scope
+    }
+    // console.log(website);           //invalid out-of-scope
+    two();
+}
+one();
 
+//********INTERESTING ******/   //lil about hoisting
+function addone(num){
+    return num+1
+}
+addone(5)           //if this call is above the function declaration -> still it will work                   
+
+//we are holding the function in the variable.
+const addTwo = function(num){       //this is expression (function te hega he va)
+    return num+2; 
+}
+addTwo(5)              //see variable de nal va
+//if this call is declared above the function declaration -> it will not work .
+//error of no access before instiallization will come.
+
+//The concept that where function is stored , how declared , their execution context , 
+//varaible treatment , tree made by JS for varaible and function is called hoisting.
