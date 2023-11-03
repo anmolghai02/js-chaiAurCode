@@ -1,16 +1,15 @@
 //for declaring the objects there are two ways : like literal and other like constants.
 //both are same but difference is of the singleton
-    //variable with const -> constant va
+    //variable with const -> constant vala
 
 //singleton : means unique object (created by constructor)
 //by other way then multiple instances can be made.
 
-//constructor method
-// Object.create  -> syntax  //in future
+//constructor way:-     (this makes the singleton )
+// Object.create  -> syntax (in future)
 
 const mySym = Symbol("Key1")
-
-//object literals : (no singleton is made)
+//object by literals : (singleton is not made)
 const JsUser = {
     name : "hitesh",     //key is name and value is "hitesh"
     age : 18,
@@ -22,8 +21,8 @@ const JsUser = {
     isLoggedIN : false,
     lastLoginDays: ["monday" , "saturday"]
 }
-//name is string but we don't use "" this.
-//in array , key is already defined
+//name is string but we don't use "" this. (can if we want)
+//in array , key is already defined.
 
 //to access
 console.log(JsUser.email)   // OR    
@@ -35,26 +34,21 @@ console.log(typeof JsUser.mySym)
 //to override the value  use = operator
 JsUser.email = "hitesh@ch.com"
 
-        //age kaam krna lye comment kita
+        //to use JsUser object further -> we commented freeze(lock concept)
 // //to freeze the value of object : use freeze() operator
 // Object.freeze(JsUser)
 // JsUser.email = "anmol@gmail.com"  //now this will not provide the error but it will not change
-// //to check 
-// //console.log(JsUser)
+// //console.log(JsUser)    //to check 
 
-
-
-//function in the object       -> phele freeze nu off krna
+//function in the object       -> first off freeze , if not done 
 JsUser.greeting = function(){
     console.log("Hello JS user")
 }
 JsUser.greeting2 = function(){
-    console.log(`Hello JS user , ${this.name}`)         //this refers to the object
+    console.log(`Hello JS user , ${this.name}`)         //this refers to the object 
 }
-console.log(JsUser.greeting) // will return [Function (anonymous)] (without() )
-
-console.log(JsUser.greeting())  //will run the function (and end te undefined ayea c  pta nai kyu? kehnda future vich)
-
+console.log(JsUser.greeting) // o/p: [Function (anonymous)] (without()) this is function reference it is not executed.... more use in future.
+console.log(JsUser.greeting())  //will run the function (and at end line there was undefined written...reason?in future )
 console.log(JsUser.greeting2())
 
 

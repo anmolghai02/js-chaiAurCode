@@ -121,3 +121,6 @@ STRINGS :
 //string de
 //06.js de
 //07.js
+
+is js oop as primitive ve end te object bn rahe?
+The {} represents an empty object .

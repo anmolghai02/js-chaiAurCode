@@ -32,7 +32,7 @@ const newArr = myArr.join()     //adds all elements into string. there is comma'
 //and splice include last one.
 console.log("A",myArr);
 
-const my1 = myArr.slice(1,3)
+const my1 = myArr.slice(1,3)                    //in string also
 console.log(my1);           //[1,2]
 console.log("B",myArr);    // B [0 ,1 ,2 ,3 ,4 ,5]
 

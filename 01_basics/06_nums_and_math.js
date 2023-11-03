@@ -2,12 +2,12 @@ const score = 400
 console.log(score) 
 
 //but u want that var is number not other DT -> use new keyword
-const balance = new Number(100)
+const balance = new Number(100)         
 console.log(balance)
 
 //diff in console.log(score) and (balance) :: for score only value but for balance it is [Number: 100] which shows that it is 100% number.  
 
-//Mehtod of Number ::       it also inherties the properties of Prototype.
+//Mehtod of Number ::()       it also inherties the properties and methods of Prototype.
 console.log(balance.toString().length)
 console.log(balance.toFixed(2)) //to provide the decimal precision. //0 means 100 , 1 means 100.0 , so on.
                 //returns string.
@@ -49,8 +49,7 @@ console.log(Math.random()*10) //vaues b/w 0 to 10
 
 const min = 10
 const max = 20
-
-console.log(  Math.floor(Math.random() * (max-min+1))   +     min)
+console.log(  Math.floor(Math.random() * (max-min+1))   +   min)
 //here value b/w 10 to 20 provided.
 //explanation : Math.random() * (max-min+1) , here max-min to define range and +1 so that don't go to 0 
             //then Math.floor -> to remove the decimal.

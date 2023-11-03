@@ -1,25 +1,24 @@
-//date API use krna difficult
+//using date API is difficult
 //currently TC39 organisation , working on Temporal API to replace Data API.
-//aajje proporsal va.
+//currently it is just a proporsal .
 
-//the Date in js starts jan/1/1970 
-
+//the Date in js , starts from jan/1/1970 
 
 let myDate = new Date()    //instance of Date
-        //all below are different representation
+        //all below are different representation ways
 console.log(myDate.toString());            //basic
 console.log(myDate.toDateString());        //only date
 console.log(myDate.toLocaleString());       // date then time (simple)
 // console.log(myDate.toISOString())
 // console.log(myDate.toTimeString())       //only time
 
-//type of Date : is object.
+//type of Date =  object.
 console.log(typeof myDate)
 
-let myCreatedDate = new Date(2023 , 0 , 23)   //month's start from 0 ie january
+let myCreatedDate = new Date(2023 , 0 , 23)   //month's start from 0 ie january  (else is regular)
 console.log(myCreatedDate.toDateString());    //o/p : Mon Jan 23 2023
 
-myCreatedDate = new Date(2023 , 0 , 23 , 5 , 3) 
+myCreatedDate = new Date(2023 , 0 , 23 , 5 , 3)   //we inputing the time too.
 console.log(myCreatedDate.toLocaleDateString()); //o/p : 23/1/2023(jan va) local standard nal.
                         //.toLocaleString() nal o/p : 1/23/2023(jan va) , 5:03:00 AM
 
@@ -31,7 +30,7 @@ myCreatedDate = new Date("01-14-2023");
 //TIME STAMPS
     //used in  quizes , polls , fastest winner applications.
 let myTimeStamp  = Date.now();
-console.log(myTimeStamp);      //provides the millisecond from jan 1970
+console.log(myTimeStamp);      //provides the millisecond from jan 1970               //i belive value is wrong
 console.log(myCreatedDate.getTime())    //provides the millisecond from jan 1970 to 1/14/2023(myCreatedDate)
 
 //in seconds rather than milliseconds
@@ -49,9 +48,3 @@ console.log(newDate.getDay())
 newDate.toLocaleString('default',{          //default -> is default internationalization
   weekday: "long"                  //this is object -> for customization of format on your own
 })
-
-
-
-
-
-
