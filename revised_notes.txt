@@ -116,7 +116,7 @@ if Heap is used then the original/reference is provided(change will reflect in i
 **variable of non primitive DT is still in the stack. But memory is in the HEAP.
 
 All js objects inherit properties and methods from a prototype ojbect.
-
+888888888888888888888
 STRINGS :
 //string de
 //06.js de
@@ -124,3 +124,10 @@ STRINGS :
 
 is js oop as primitive ve end te object bn rahe?
 The {} represents an empty object .
+
+in console.log("Result",var_name) == va .log("Result" + var_name)
+// in js "" and undefined is considered false values.
+
+
+reason to write notes better : mai .js files nai open kra ga like 05-function.js file vich 
+os vich bas kuj he va lekh dena mai
