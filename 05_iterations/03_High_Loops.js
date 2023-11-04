@@ -1,7 +1,7 @@
 //Topic : High order array loops
 /*
-*  for of
-*  for each
+*  for of -> arr , string , maps
+*  for in (in next file)
 *   
 
 */
@@ -16,7 +16,6 @@ const greeting = "Hello World"              //with Strings
 for(const greet of greeting){
     console.log(greet);
 }
-
 
 
 //Maps                            -> built-in object 
