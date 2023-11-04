@@ -131,3 +131,14 @@ in console.log("Result",var_name) == va .log("Result" + var_name)
 
 reason to write notes better : mai .js files nai open kra ga like 05-function.js file vich 
 os vich bas kuj he va lekh dena mai
+
+//How does js works behind the scene -> Video notes
+//scope of var variable is global even written in the if statement example
+if(somethingtrue){
+    var temp = 10;
+    let temp2 = 11;
+}
+console.log(temp)  //accessible   -> it is actually bad
+console.log(temp2)  //un-accessible  -> as out of scope
+
+
