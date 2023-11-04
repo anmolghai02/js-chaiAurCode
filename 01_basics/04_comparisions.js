@@ -2,7 +2,7 @@
 //here conversion happens
 console.log("2">1); //o/p true
 //here the js has converted to STRING to NUMBER
-console.log("2a">1);
+console.log("2a">1);   //o/p 
 //here 2a was converted to the NaN which  
 
 //for this unliked data comparison problem & other functions, People started to use extended version of js called TypeScript.
