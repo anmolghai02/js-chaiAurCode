@@ -2,7 +2,7 @@
 /*
 *  for of -> arr , string , maps
 *  for in (in next file)
-*   
+*  for each (in next file)
 
 */
 
