@@ -27,7 +27,7 @@ if(Object.keys(emptyObj).length === 0){
 
 
 
-//Nullish Coalescing Operator (??) : null undefined
+//Nullish Coalescing Operator (??) : null undefined                     //USEFULL 
 
 // it is new operator , only made for null and undefined .
 //it is used to assign value but avoid if they are null and undefined -> in that case preceding value will be assigned. 
