@@ -3,7 +3,7 @@ let accountEmail = "hitesh@gmail.com"
 var accountPassword = "12345"
 accountCity = "Jaipur"
 
-// accountID = 2 (not allowed) //eh interpreter dekhe ga .
+// accountID = 2 (not allowed as constant declaration) //eh interpreter dekhe ga .
 accountEmail = "hc@hc.com"
 accountPassword = "21211221"
 accountCity = "Bengaluru"
@@ -17,7 +17,7 @@ console.table([accountId , accountEmail , accountPassword , accountCity])
 /*
     don't use without and var
     for var -> it existed before , it don't had scope , like if used in for loop it will be used.
-    without es lye cuz it is safe language.
+    js is so type safe language -> without ve declare ho sakhda.
 */
 
 //console.table : provides the output in the table.

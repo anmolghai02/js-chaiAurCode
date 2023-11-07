@@ -1,0 +1,313 @@
+MDN doc , for original -> ECMAscript .
+
+why different Extensions ?
+with some extension , software(compiler or interpreter) will know what syntax means. 
+
+initially , JS was written on the web browsers and software was not common.
+But now software is available  which made js standlone language -> it not only used in frontend but in backend or everywhere.
+we will use the NODE js software to LEARN JS.
+
+JS is interpreted.
+
+TERMINAL Query :
+1) node -v :: to see node version
+2) node folder_name/file_name.js :: to interpret code.             *****
+
+VARIABLE'S AND CONSTANT'S 
+ * const keyword for constants.
+ * let && var keyword for variables.
+ * even without let or var , we can declare variables.
+    (recommended : to use 'let' for variables only) (because of issue in block scope and functional scope) //block means block and functional means in functional 
+    (cuz var has global scope even if declared in local scope ({} vich or function vich) ) 
+    (without not bcz-> not professional code )
+
+JS is type safe language.
+
+TO PRINT OUTPUT :
+   * console.log(variable_name);
+   * console.table(  [variable1 ,var2 , var3 , ..]  );
+        it will print in the table with column's -> named as index and values.
+        in the matrix.   -> in index column , values are 0 , 1 ,....
+
+Initally , js syntax / code was different . Developers changes it.
+To use only the newer version ,' "use strict"; ' After this only newer version will work.
+but now majority is newer version.
+
+DATA TYPES :
+Primitive Data Types : number , string , boolean ,etc . (All with small letter.)
+NonPrimitive Data Types : object like arrays , function , inbuilt ojbects : Number ,String , Boolean , etc.
+                        (All with capital letter.)
+1)in primitive DT (7 types): 
+                    number , string , bigint , boolean , null , undefined , symbol. 
+    null : standlone Value (means it also a data type )
+    undefined : variable declared but not initialized with the dataType.               //IMP
+    symbol : to make value unique (will use in react)
+    **decimals also comes under number.
+2)in non-pri DT : only object . eg) array, functions.
+
+(difference b/w primi and non primi)   ->diff is how stored in memory and accessed.
+Primitive data types are call by value.
+NonPrimitive or referenced are call by reference.
+(i know there meaning)
+
+example of symbol : const id = symbol('123');
+                    const anotherId = symbol('123');
+                    here the id's are differnt.
+                    console.log(id == anotherId)  // false
+                    same value still different.
+example of bigint : use n at the end
+                    const bignum = 233423424535322n
+
+Arrays , Object and Functions Syntax example:
+Array    const arr = ["shaktiman" , "naagraj" , "doga"];
+Object     let obj = {    //even without variable , we can use the array only use the {}
+            name : "hitesh" ,
+            age : 22.
+           }   //all objects are declared in the { } braces.
+Function    const func = fucntions(){    //can be declared without variable.
+                 console.log("hello world");
+            }
+//let or const -> in these three -> they are storing the reference
+//if used const -> can't change the reference. 
+eg) const arr = [1 , 2, 3]
+    arr.push(4)   //works
+but arr = [5 ,6 ,7]  //don't work , ERROR
+eg) let arr = [1,2,3]
+    arr = [4, 5 ,6 ]  //works
+
+TYPE OF OPERATOR
+To check Type : use operator typeof.
+    * console.log(typeof age ) //o/p undefined (reason we only declared not intialized) //not declared/used above.
+        variable uninitialized will be undefined.
+    * console.log(typeof null)  //o/p OBJECT  (asked in interview)   IMP
+    * console.log(typeof undefined)  //o/p undefined (interview)
+        
+    *you can also use syntax : typeof (score) or typeof score
+    for the null : ans you can say that the ecma organisation has setted the rules for scripting languages which js follows. 
+    
+    *for function : it comes function (it is actually called function object)
+    // all other non primitive data type -> comes object.
+
+DATA CONVERSION : syntax => let varA = DataTypeObject(varB)
+ 1) to number 
+        ****some non convertable's -> will get converted But the value can be NaN or else wrong.
+    syntax : let var2 = Number(var1);          ******
+    cases) (string & boolean)
+        "33" -> will be number and with value 33
+        "33a" -> number with value NaN
+        true -> 1 and false -> 0
+ 2) to boolean 
+    Syntax : let var2 = Boolean(var1);
+    cases ) (string & number)    
+        "" (empty string) -> false
+        else "hites" -> true
+        for number : for 0 : false
+                     for all other : true     
+ 3)to string
+    for number to string
+    33 -> "33"
+
+W3Schools.com -> Type Conversion -> at end of website -> there is conversion TABLE IMP
+
+Operations :
+ 1)power : 2**3 is 2^3.                            // ** is power operator
+ 2)str concatenation : str3 = str1+str2
+ 3)IMP : (topic : data conversion also)                         //avoid these , use parenthesis   
+   //remember for interview  not used in productions 
+    console.log("1"+2) //op 12
+    console.log(1+"2") //op 12
+
+    console.log("1"+2+2); //answer 122      //number will be incremented(converted)
+    console.log(1+2+"2"); //answer 32           //rule va && very Advance
+    //avoid this , use parenthesis
+            //Unary + operator (not arithmetic operator) Data Conversion
+    console.log(+true); //answer 1       //here boolean will be converted(incremented)
+    // console.log(true+)  not possible
+    console.log(+""); //answer 1
+    // console.log(""+);  not possible
+ 4) prefix and postfix 
+
+JS is dynamically Typed language (where we don't have to define the type of varaible.)
+All types are assigned at run-time.
+
+COMPARISIONS
+//basic u can do it But data convesion Needed.
+NaN is number that is not a legal number -> comparision not possible.
+                        Q) which varible will be converted ?      ->    koi precedence?
+//remember 
+equality operator works different FROM  comparision operators.
+console.log(null >= 0);//true   //converts null to 0    (or other comparision operator)
+console.log(null == 0);//false  
+//undefined will be converted to NaN
+console.log(undefined == 0);
+console.log(undefined > 0);
+console.log(undefined >= 0);
+//here all are false.
+use === , it will check dataType also. (no conversion)
+
+How memory work in the JS?
+stack(all primitive)   Heap(non primitive)
+if stack is used then the copy is provided.(not original)
+if Heap is used then the original/reference is provided(change will reflect in it)
+*to see this check 04A_dataType_summary.js
+**variable of non primitive DT is still in the stack. But memory is in the HEAP.
+
+All js objects inherit properties and methods from a prototype ojbect.
+
+STRINGS:
+log(name+repoCount+" value")       //old way
+//other syntax
+log(name,"hello*****",repoCount);  //no need to put the space as it automatically provides
+//New Modern SYNTAX       (highly used in back-end)
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);        //back ticks
+            //this approach is called string interpolation -> here we make places using $ sign and put the value 
+*behind the sceen , strings (primitive declared) invokes OBJECTS.
+*there are key-values . eg)0:"h", 1:"i" ,etc (String OBJECT vich ve)
+(this is not array , it is Object)
+
+STRINGS OBJECT:
+we get LENGTH property and many methods under Prototype. (ProtoType after OOPS)
+log(string.length) 
+Methods :(10)
+1) const string1 = "   hitesh  "     //here i don't want the spaces
+    console.log(string1.trim()); //it does from both sides.
+
+2)const url = "http:\\hiteshchoudhary.com\hitesh%20choudhary"
+    console.log(url.replace('%20','-'));    //replace
+3)console.log(url.includes('hitesh'))      // returns boolean
+
+4)const anotherString = gameName.slice(-8,4)    //in this Method , we can provide the -ve values it will provide reverse .
+console.log(anotherString)   //o/p : ite
+
+5)console.log(gameName.split('-')) //splits the string on the basis of '-' . //whenever "-" comes -> split happens.
+
+6)console.log(gameName.toLowerCase());  //whole to lower case
+7)console.log(gameName.toUpperCase());
+    //as the String is primitive DT : original is not changed.
+8)console.log(gameName.charAt(3))
+9)console.log(gameName.indexOf('t'))              //first one encountered
+10)const tempString = gameName.substring(0,4)    //same as java's .
+
+NUMBERS 
+to declare only number :- let num = new Number(100)      //same for other DT
+console.log() : will look like [Number : 100] but primitive nal only 100.
+Methods :
+1)console.log(balance.toString().length)
+2)console.log(balance.toFixed(2)) //to provide the decimal precision. //0 means 100 , 1 means 100.0 , so on.
+                //returns string.
+3)const otherNum = 23.896
+console.log(otherNum.toPrecision(3))     //it will return the number to a specified length 
+                                        //a decimal point and nulls are added(if need) to create specified length
+                //returns string
+    //for above o/p will be 23.9 last vala round off
+    //for 123.8966 -> o/p : 124   (with precision 3 )
+    //for 1123.8966 -> o/p : 1.12e+3 (with precision 3) -> phele 3 precision de te and baaki exponential deta.
+                                        //use carefully
+4)const hundreds = 1000000
+console.log(hundreds.toLocaleString())  //used for representation like 1,000,000   in US format (defaultone)
+//for indian format : 10,00,000
+console.log(hundreds.toLocaleString('en-IN'))   
+
+MATH
+//Math object provides the properties and methods like in java. 
+console.log(Math.PI)
+console.log(Math.abs(-4))    //4
+console.log(Math.round(4.6)) //5
+console.log(Math.ceil(4.6))  //5  upper vala 
+console.log(Math.floor(4.9)) //4  neeche vala
+console.log(Math.sqrt(4))   //16
+Math.pow(3,3)      //27
+Math.min(4,3,6,9); //3
+Math.max(5,1,2,8) //8          //Jene marzi le sakhde number
+//most used
+console.log(Math.random()) //values b/w 0 to 1
+console.log(Math.random()*10) //vaues b/w 0 to 10
+
+const min = 10
+const max = 20
+console.log(  Math.floor(Math.random() * (max-min+1))   +   min)
+//here value b/w 10 to 20 provided.
+//explanation : Math.random() * (max-min+1) , here max-min to define range and +1 so that don't go to 0 
+            //then Math.floor -> to remove the decimal.
+            // + min -> to start from the min value.
+
+
+DATE IN JS
+let myDate = new Date()    //instance of Date
+log(typeof myDate) //object
+console.log(myDate) //is less readible
+Representation of Time :
+    console.log(myDate.toString());            //basic
+    console.log(myDate.toDateString());        //only date
+    console.log(myDate.toLocaleString());       // date then time (simple) with local standard
+    console.log(myDate.toISOString())
+    console.log(myDate.toTimeString())       //only time
+
+Other Ways to create date OBJECT :-
+    IMP : months starts from 0 and date from 1.
+* let myCreatedDate = new Date(2023 , 0 , 23)   
+    console.log(myCreatedDate.toDateString());    //o/p : Mon Jan 23 2023
+* myCreatedDate = new Date(2023 , 0 , 23 , 5 , 3)   //we inputing the time too.
+    console.log(myCreatedDate.toLocaleDateString()); //o/p : 23/1/2023(jan va) local standard nal.
+                        //.toLocaleString() nal o/p : 1/23/2023(jan va) , 5:03:00 AM
+    //if you want to insert in yyyy-mm-dd
+* myCreatedDate = new Date("2023-01-14");
+    //for dd-mm-yyyy
+* myCreatedDate = new Date("01-14-2023");
+//many other way check from W3Schools
+
+TIMESTAMPS
+    used in  quizes , polls , fastest winner applications.
+let myTimeStamp  = Date.now();
+console.log(myTimeStamp);      //provides the millisecond from jan 1970             
+console.log(myCreatedDate.getTime())    //provides the millisecond from jan 1970 to 1/14/2023(myCreatedDate)
+
+//in seconds rather than milliseconds
+console.log(Math.floor(Date.now()/1000)) 
+//Math.floor or Math.round to avoid answer in decimal.
+
+Get Methods:
+let newDate = new Date()
+console.log(newDate.getTime()+1)
+console.log(newDate.getMonth())
+console.log(newDate.getDay())
+console.log(newDate.getFullYear) //year
+//gets the paticular thing and can use the operators with them.
+//eg) `${newDate.getDay()} and the time is ${newDate.getTime}`
+
+//(IMP)  toLocaleString Method      (used in many places.)
+newDate.toLocaleString('default',{          //default is default internationalization.
+  weekday: "long"                  //{...} is object -> for customization of format on your own
+})
+
+
+
+
+
+
+
+
+888888888888888888888
+
+{} is scope
+
+is js oop as primitive ve end te object bn rahe?
+The {} represents an empty object .
+
+in console.log("Result",var_name) == va .log("Result" + var_name)
+// in js "" and undefined is considered false values.
+
+
+reason to write notes better : mai .js files nai open kra ga like 05-function.js file vich 
+os vich bas kuj he va lekh dena mai
+
+//How does js works behind the scene -> Video notes
+//scope of var variable is global even written in the if statement example
+if(somethingtrue){
+    var temp = 10;
+    let temp2 = 11;
+}
+console.log(temp)  //accessible   -> it is actually bad
+console.log(temp2)  //un-accessible  -> as out of scope
+
+

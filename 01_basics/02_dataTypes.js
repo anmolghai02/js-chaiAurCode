@@ -1,10 +1,10 @@
-"use strict"; //now only syntax , classes , module new form of JS nal 
+"use strict"; //now only syntax , classes , module -> new form of JS nal 
 
 // alert( 3+3 ) //eh hega va per WEB nal hove ga and now we are using nodejs , not browser.
 
 console.log(3+3); console.log("hitesh")
 //here we are reducing the readiblity of code
-// that's why even without semicolon :: it works
+// that's why even without semicolon ";" :: it works
 
 //so do
 console.log(3+3)

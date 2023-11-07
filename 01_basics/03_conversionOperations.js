@@ -1,18 +1,17 @@
 let score = "33a";
 
-console.log(typeof(score));
-console.log(typeof score);
+console.log(typeof(score));/*same*/console.log(typeof score);
 
 let valueInNumber = Number(score);  //eh NaN ho jna jo ki not a number 
 console.log(typeof valueInNumber);  //number
 console.log(valueInNumber);         //NaN
-//convert ho geya , value wrong.
+//convert ho geya , value wrong(ie NaN).
 
 // if value was null -> converted to 0.
-// if value was undefined -> converted to NaN
+// if value was undefined -> converted to NaN  //means undefined he deta va like null
 //if bool true -> 1 , false -> 0
-//if String then -> NaN
-//Type te Convert ho he jnde va -> value 
+//if String(means like "233A") then -> NaN
+//Type te Convert ho he jnde va ->But value nai. 
 
 //diffDataTypes to Number
 //"33" => 33
@@ -36,7 +35,6 @@ console.log(stringNumber);
 console.log(typeof stringNumber);
 //number to string.
 
-
 //********** OPERATION ************
 console.log(2**3); //2 de power
 
@@ -45,6 +43,8 @@ let str2 = " hitesh"
 let str3 = str1+str2;
 console.log(str3);
 
+console.log("1"+2) //op 12
+console.log(1+"2") //op 12
 //IMP
 console.log("1"+2+2); //answer 122 
 console.log(1+2+"2"); //answer 32
@@ -59,17 +59,7 @@ console.log(+true); //answer 1
 console.log(+""); //answer 1
 // console.log(""+);  not possible
 
-
 //prefix and postfix
 let gameCounter = 100
-gameCounte++;
+gameCounter++;
 console.log(gameCounter);
-
-
-
-
-
-
-
-
-

@@ -5,10 +5,11 @@
 //the Date in js , starts from jan/1/1970 
 
 let myDate = new Date()    //instance of Date
+console.log(myDate)  //this is less readible
         //all below are different representation ways
 console.log(myDate.toString());            //basic
 console.log(myDate.toDateString());        //only date
-console.log(myDate.toLocaleString());       // date then time (simple)
+console.log(myDate.toLocaleString());       // date then time (simple) with local Standard
 // console.log(myDate.toISOString())
 // console.log(myDate.toTimeString())       //only time
 
@@ -29,8 +30,8 @@ myCreatedDate = new Date("01-14-2023");
 
 //TIME STAMPS
     //used in  quizes , polls , fastest winner applications.
-let myTimeStamp  = Date.now();
-console.log(myTimeStamp);      //provides the millisecond from jan 1970               //i belive value is wrong
+let myTimeStamp  = Date.now();//returns no of milliseconds since jan 1 ,1970
+console.log(myTimeStamp);      //provides the millisecond from jan 1970         
 console.log(myCreatedDate.getTime())    //provides the millisecond from jan 1970 to 1/14/2023(myCreatedDate)
 
 //in seconds rather than milliseconds
@@ -41,10 +42,11 @@ let newDate = new Date()
 console.log(newDate.getTime()+1)
 console.log(newDate.getMonth())
 console.log(newDate.getDay())
+console.log(newDate.getFullYear) //year
 //gets the paticular thing and can use the operators with them.
 //eg) `${newDate.getDay()} and the time is ${newDate.getTime}`
 
 //(IMP)  toLocaleString Method      (used in many places.)
-newDate.toLocaleString('default',{          //default -> is default internationalization
-  weekday: "long"                  //this is object -> for customization of format on your own
+newDate.toLocaleString('default',{          //default is default internationalization
+  weekday: "long"                  //{...} is object -> for customization of format on your own
 })
