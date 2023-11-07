@@ -7,18 +7,21 @@ const repoCount = 50
 // console.log(name+repoCount+" value");
 //not used in modern code
 
+//other syntax
+console.log(name,"hello*****",repoCount);  //no need to put the space as it automatically provides
+
 //New SYNTAX       (highly used in back-end)
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); 
 // ` are called back ticks
 
-//behind the sceen ,above String works as object .
+//behind the sceen ,above String invokes object .
 
 //String OBJECT: 
 const gameName = new String('hitesh-hc')         //S capital
 //in string  , there is key and values . eg) 0th = h , 1st = i , etc
 //(this is not array, this is object.) (like after seeing 0th = h )
 console.log(gameName[0])    //to access using key-value pair.
-console.log(gameName.__proto__);   //to access prototype  -> o/p : {}   (empty braces) 
+console.log(gameName.__proto__);   //to access prototype  -> o/p : {}   (empty braces) (empty object)
 //what is prototype ?
 //String object inherites the Prototype object.  (all objects inherite Prototype)
 

@@ -280,6 +280,7 @@ newDate.toLocaleString('default',{          //default is default internationaliz
   weekday: "long"                  //{...} is object -> for customization of format on your own
 })
 
+//Date and Time -> will be introducted again in future .As this is basic.
 
 
 
