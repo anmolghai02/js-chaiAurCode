@@ -13,6 +13,8 @@ const myaar2 = [[0,2 ,4 ,4] , true , "hitesh"]   //valid
 
 console.log(myArr[0])
 
+//arrayName.length
+
 //Array Methods
 myArr.push(6)  //adds element at end
 
@@ -29,8 +31,8 @@ const newArr = myArr.join()     //adds all elements into string. there is comma'
 
 //Slice , Splice
 //splice make changes in original array. slice don't. 
-//and splice include last one.
-console.log("A",myArr);
+//and splice include last one.           slice don't.
+console.log("A",myArr);     //A [0,1,2,3,4,5]
 
 const my1 = myArr.slice(1,3)                    //in string also
 console.log(my1);           //[1,2]
