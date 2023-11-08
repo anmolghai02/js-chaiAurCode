@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <div class="parent">
+        <!--this is comment-->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent)     //console vich dekhe ga
+    // console.log(parent.children)  //o/p in HTML Collection
+    // console.log(parent.children[1].innerHTML)
+
+    // for(let i =0 ; i<parent.children.length ; i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    parent.children[1].style.color = "orange";
+    //very used
+    console.log(parent.firstElementChild); //o/p : monday vala div
+    //similar lastElement
+    console.log(parent.lastElementChild);
+
+    //movement from parent to children  -> .querySelector
+    const dayone = document.querySelector('.day')
+    console.log(dayone);
+        //.querySelector is expensive operation. uses thread , DOM is tree so query is traversing.
+    
+    //movement from child to parent
+    console.log(dayone);
+    console.log(dayone.parentElement);
+
+    //to sibling
+    console.log(dayone.nextElementSibling);
+    
+    console.log("NODES: ",parent.childNodes);
+    //es vich 4 nai va es vich 9 va
+    //behind the scene jo ve ho reha aa jve ga.
+//fer samaj lye
+        //the react is highly built on childNodes (fer sun lye..kuj hor c)
+</script>
+
+</html>
