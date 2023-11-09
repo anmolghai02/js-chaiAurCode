@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai aur code</title>
+</head>
+<body style = "background-color: #212121; color: #fff;">
+    <ul class = "language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+        //why used .querySelector() here?
+        //innerHTML is costly => because it has to traverse the whole document tree.
+        //if the amount of the traversal is huge -> 
+    }
+    addLanguage("Python");
+    addLanguage("TypeScript");
+
+    //optimized Way  -> don't have to traverse the whole tree
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        //or you could
+        //const addText = document.createTextNode(langName);
+        //li.appendChild(addText);
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage('goLang');
+
+
+
+    //Edit 
+    //mai less optimized vala he ajje kr rahe use
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //child vale thing leye kehnda ki CSS vala va
+    // secondLang.innerHTML = "mojos"   
+    //NEW WAY                   //textContent and innerHTML same he va -> 1:43:00 DIFF dseya
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo";
+    secondLang.replaceWith(newli);
+
+    //Edit             //new property outerHTML
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //REMOVE  -> easy
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();   
+</script>
+
+</html>
