@@ -30,6 +30,7 @@ console.log(regularUser.fullName?.userName.firstName);
 //it makes the synatx shorter && like provide protection .
 
 
+
 //Combining objects into single OBJECT
 const obj1 = {1: "a" , 2: "b"}
 const obj2 = {3: "c" , 4: "d"}
@@ -45,6 +46,8 @@ const obj3 = Object.assign({}, obj1 , obj2)
 const obj4 = {...obj1 , ...obj2}          //spread operator
 //same as the array
 //console.log(obj4)     //to check
+
+
 
 //Array Object
 const users = [
@@ -64,6 +67,8 @@ const users = [
 //there is key that is provided . (0 , 1 ,2)  to make access
 users[1].email  //syntax to access.
 
+
+//INBUILT METHODS OF OBJECT'S
 console.log(tinderUser);
 console.log(Object.keys(tinderUser));       //will get keys in array
 console.log(Object.values(tinderUser));     //will get values in array
