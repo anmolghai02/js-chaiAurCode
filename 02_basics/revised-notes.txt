@@ -1,0 +1,261 @@
+ARRAY
+in js's Array , we can store multiple elements of DIFFERENT (DATA) TYPES under single Variable.
+they are resizable.
+
+there is prototype for prototype(just note for now).
+
+JS array-copy operations create shallow copies. 
+(a shallow copy of an object is a copy whose properties share the same references)
+            //deep copy who don't share same reference . CaLL by Value
+    //means reference send hunda in shallow copies.
+
+There are Key-values. i.e. 0 : 'shoes' , 1 : 'shirts' , 2 : 'socks' ,etc
+
+arrayName.length ;
+Methods: ()
+1)myArr.push(6)  //adds element at end
+2)myArr.pop()    //removes element at last
+3)myArr.unshift(0)    //by this value is added at front , baaki next te shift ho jnde.
+4)myArr.shift() //front vala removed
+5)log(myArr.includes(9)) //return boolean
+6)log(myArr.indexOf(9))  //return int , -1 if element doesn't exist.
+7)const newArr = myArr.join()     //adds all elements into string. there is comma's in-between.
+    //it converts to the string and comma separated.
+**********
+*Slice , Splice
+*splice make changes in original array. slice don't. 
+*and splice include last one.           slice don't.
+**********
+8)console.log("A",myArr);     //A [0,1,2,3,4,5]
+const my1 = myArr.slice(1,3)                    //in string also
+console.log(my1);           //[1,2]
+
+9)console.log("B",myArr);    // B [0 ,1 ,2 ,3 ,4 ,5]
+const my2 = myArr.splice(1,3)
+console.log(my2);           //[1,2,3]           //last also included 
+console.log("C",myArr);     //C [0 ,4 ,5]       //original also changed
+
+Merging Arrays :
+1)  array1.push(array2)   //by this array gets stored at end =>> means last element Array va
+    //console.log(array1)
+
+2)  const arr3 = arr1.concat(arr2)   
+    //now dc_Heros get stored at the end of the Marvel_Heros but this returns new array  
+    //console.log(arr1)   //this is same as original. 
+    console.log(allHeros)
+
+3)SPREAD OPERATOR
+    const arr = [...arr1 , ...arr2]
+
+4)  let arr1 = [1,[2,3],[5,6,2,1]]                  //it does recursively
+    const arr2 = arr1.flat(Infinity)    //returns new array with all inside array are concatenated . 
+        //Infinity is depth upto which we want to concatenate
+    
+More Array Methods : (3)
+1)log(Array.isArray("hitesh"));   //Array.isArray() returns boolean.    //is parameter array?
+2)log(Array.from("Hitesh"))  //o/p : ['H','i','t' , e , s , h]
+**log(Array.from({name : "hitesh"}))  //o/p : [] empty array    (interview) 
+                        //object is unconvertable to array.
+3)let score1 = 100
+  let score2 = 200
+  let score3 = 300
+  console.log(Array.of(score1 , score2 , score3))     //returns new array from set of elements
+
+
+
+
+
+
+OBJECTS 
+*here we will learn only one way to declare and initialize.
+*Non - singleton OBJECT here.
+    *singleton - only unique object .
+    *Non Singleton - Multiple instance can be created.
+
+const mySym = Symbol("Key1")        //just for the symbol to be used in the JsUser OBJECT
+const JsUser = {
+    name : "hitesh",     //key is name and value is "hitesh"
+    age : 18,
+    "full Name" : "hiteshChoudary",
+    [mySym] : "mykey1",               //if [] not there then it wouldn be the string.
+       INTERVIEW                     //when console.log it will also show that it is symbol
+    location : "jaipur",
+    email : "hitesh@gmail.com",
+    isLoggedIN : false,
+    lastLoginDays: ["monday" , "saturday"]
+}
+*name(name-value) is string but we don't use "" this. (can if we want)
+*in array, key is already defined. Here we define key too.
+*here key is called name -> name-value.
+
+to access
+1) normal access
+console.log(JsUser.email)   // OR    
+console.log(JsUser["email"])        //but have to input as string (as it is String)
+2)spaced Key access
+  //console.log(JsUser.full Name);  //not-valid only way is ["full Name"] but it was fullName then valid
+3)accessing variable declared   *****INTERVIEW****  -> How to declare and access?
+console.log(JsUser[mySym]); //valid
+                IMP
+console.log(JsUser.mySym);  //it will print undefined -> not possible
+
+console.log(typeof JsUser.mySym); //o/p : undefined
+console.log(typeof JsUser[mySym])  //o/p : string 
+console.log(typeof mySym);         //o/p : symbol     //Reason 4 correct : it is declared as this.
+
+FREEZE METHOD OF Object
+                    //to use JsUser object further -> remove freeze code(lock concept)
+*to freeze the value of object : use freeze().
+Syntax : Object.freeze(JsUser);
+JsUser.email = "anmol@gmail.com"  //this will not provide the error BUT it also not change.
+console.log(JsUser)    //to check -> will show unchanged object
+*if Changes made -> NO changes will be made AND no error will be displayed.
+
+OBJECTS Functions : 
+                                        *first off freeze , if not done
+    Syntax :-
+JsUser.greeting = function(){           //greeting is function variable .
+    console.log("Hello JS user")
+}
+console.log(JsUser.greeting) // o/p: [Function (anonymous)]
+                 this is function reference it is not executed.... more use in future.
+console.log(JsUser.greeting())  //will run the function 
+                        (and at end line there was undefined written...reason?in future (one execution happens at there own.))
+                        (on MDN , says it returns undefined if nothing is returned.)
+JsUser.greeting2 = function(){
+    console.log(`Hello JS user , ${this.name}`)         //this refers to the object 
+}
+this inside Object Method => refers to the Object.
+
+
+Few Ways to declare OBJECT : 
+1) non-singleton    
+        const JsUser = {           
+            name : "hitesh",
+            age : 18
+        }
+2) Singleton
+    const obj = new Object()
+3) Non-singleton
+        const tinderUser = {}        
+        tinderUser.id = "123abc"
+        tinderUser.name = "sammy"           
+        tinderUser.isLoggedIn = false           //we add these key's and their values.
+
+
+Object inside Object
+const obj1 = {
+    mail : "@gamil.com",
+    obj2 : {                  //further object inside sub object 
+        obj3 : {
+            firstName : "hitesh",
+            lastName : "choudhary"
+        }
+    } 
+}
+
+
+'?' OPERATOR
+it is used to know that whether the variable exist or not if exist then go further.
+it makes the synatx shorter && like provide protection .
+console.log(obj1.obj2?.obj3.variable);
+
+
+ARRAY OBJECT
+const arr = [
+    {
+        key1 : val1 ;
+    },
+    {
+        key2 : val2 ;
+    },
+    {
+        key3 : val3 ;
+    }
+]
+
+
+INBUILT METHODS OF OBJECT'S
+console.log(tinderUser);
+console.log(Object.keys(tinderUser));    -> will get keys in array
+console.log(Object.values(tinderUser));  -> will get values in array
+console.log(Object.entries(tinderUser));  
+             -> will array and inside there will be arrays -> with each having 1st element as key and 2nd element as value.
+*keys and values methods will be used highly.
+
+console.log(tinderUser.hasOwnProperty('isLogged')) //return boolean 
+    returns on basis that object owns that property or not.
+
+
+
+COMBINING OBJECT'S into single object.
+            const obj1 = {1: "a" , 2: "b"}
+            const obj2 = {3: "c" , 4: "d"}
+
+1)
+const obj3 = {obj1 , obj2}
+this will make the 2 objects inside one object.          //same prob as in object
+2)     
+const obj3 = Object.assign({}, obj1 , obj2) 
+    *why {} ? it is empty object .
+    *this is optional and this is done in production level.
+3)
+    even Object.assign will be used less.
+const obj4 = {...obj1 , ...obj2}          //spread operator
+//same as the array
+
+
+DE-STRUCTURING OF OBJECT        - (will use in React) 
+const course = {
+    coursename : "js in hindi",
+    price : "999",
+    courseInstructor : "hitesh"
+}
+course.courseInstructor; //this is very long to make code clean
+                //use the destructor
+syntax :
+const {courseInstructor} = course   //now we can only use word courseInstructor
+console.log(courseInstructor);
+
+to provide the name
+const {courseInstructor : instructor} = course
+console.log(instructor);
+
+*in react 
+*when ever you see the {company} -> think destructing
+*eg const navbar = ({company}) =>  { 
+*} 
+
+*also destructing of arrays can be done but rarely done.
+
+
+
+JSON API  
+    (js object notation)
+all api's return in JSON (or array format)
+
+JSON Syntax
+{
+    "name": "hitesh",
+     "coursename": "js in hindi",
+     "price" : "free"
+}                                   
+keys are in string.
+
+Array format syntax:
+[ 
+    {},
+    {},
+    {}
+]
+
+
+
+
+
+
+
+
+
+//Object object needs more discussion . (menu krna pena )
+//vase keha es ne agge krva ga ... menu ve krna pena

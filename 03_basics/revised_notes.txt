@@ -1,0 +1,218 @@
+FUNCTIONS
+
+syntax :
+function fun_name(){
+    //code
+}                            
+    other synatx : this function is also called expression.
+            const fun1 = function(//parameters){
+                //code
+            }
+    other syntax : arrow function
+            let fun2 = () =>{
+                //code
+            }
+    *in these two syntax : you have option to store the function into variable.        
+Remember -> these work different. (eg with "this" keyword )
+so sometimes you want behaviour of regular function ,if not,use arrow functions. 
+
+
+fun_name;      //will provide the reference
+fun_name();     //for execution
+
+parameters are those which are declared with function declaration.
+arguments are those which are passed with function call for execution.
+
+syntax with parameters:
+function fun_name(num1 , num2){
+    console.log(num1 + num2 ); 
+}
+fun_name() o/p : NaN
+fun_name(3,4) o/p : 7
+fun_name(3,"4") o/p : 34
+fun_name(3,"a") o/p : 3a
+fun_name(3,null) o/p : 3
+("3",1)  o/p :31
+
+*IMP*
+**In JS , if u don't send the argument in function -> then it will be undefined.
+function loginUserMessage(username){
+    return `${username} just logged in`
+}
+console.log(loginUserMessage())    
+o/p : undefined just logged in
+
+*to set default value :
+ eg) function loginUserMessage(username = "sam"){ ......}
+
+
+RETURN KEYWORD
+*case: let function don't return, then
+const res = fun(3,4)
+console.log(res); o/p : UNDEFINED
+Reason: we didn't returned anything from funciton.
+
+function fun(num1){
+    return num1 ; 
+}
+const res = fun(3)
+log(res) -> 3
+
+
+
+REST OPERATOR
+*symbol : ... same as spread operator but here it will be called rest operator.
+*useCase : in cart we don't know what amount there will be .
+syntax : 
+function calculateCartPrice(...num1){
+    return num1;
+}  
+console.log(calculateCartPrice(200,400,500));
+o/p : array [200,400,500]
+
+
+
+Function and Object parameter
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+const obj = {
+    username : "hitesh",
+    price : 199
+}
+handleObject(user)
+o/p : username is hitesh and price is 199.
+
+*we can directly pass the object (like given syntax)
+handleObject({           
+    username : "sam",
+    price : 399
+})
+
+there is no type checking in js (we have to use if-else) 
+to check the argument passed is OBJECT.  
+        reason for creation of typescript.
+
+
+Function and array parameter
+const myNewArray = [200,400,100,600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myNewArray));    //reference
+
+console.log(returnSecondValue([200,400,500,1000]))  //with array
+
+
+SCOPE : {} 
+    var/nothing even declared under the block scope.
+    it will have Scope outside (i.e Global Scope).
+                i.e we avoid them.
+
+    but let and const -> no such issue.
+
+*interview question
+global scope in IDE eg with node and in console -> are different.
+
+
+****INTERESTING*******
+1)call is above and function declaration is below.it will work.
+      addone(5);
+      function addone(num){
+        return num+1 ; 
+      }
+2)const fun1 = function(num){
+        reuturn num ; 
+  }                      //this is Expression 
+  fun1(5) ;
+  **IF call declared above -> Error of no access.
+
+The concept Hoisting that where function is stored , how declared , their execution context , 
+varaible treatment , tree made by JS for varaible and function is called hoisting.
+(in future)
+
+
+THIS KEYWORD:
+"this" declared inside the object -> will refer to that object.
+    -> we can use it with dot operator -> to access its key's value.
+"this" declared outside any object -> o/p : {} empty object.
+*but in console : window object(it is global object in browsers.)
+
+"this" declared inside the function (in node Environment) :-
+1)
+    function chai(){
+        let name = "hitesh";
+        console.log(this.name);     o/p : undefined
+        console.log(this);
+                    o/p : many things will come up.  
+    }
+2)
+    let chai = function(){
+        let name = "hitesh";
+        console.log(this.name);     o/p : undefined
+        console.log(this);
+                    o/p : many things will come up.
+    }
+3)
+    let chai = () => {
+        let name = "hitesh";
+        console.log(this.name);     o/p : undefined
+        console.log(this);
+                    o/p : {} empty object.
+    }
+w3schools -> read more.(for interview)
+
+Arrow Function : 
+synatx:
+let fun1 = () =>{
+    //code
+}                   name is optional.
+
+it makes shorter funtion syntax -> If funtion only returns a value.
+This only work , if function has only one statement.
+eg) let hello = () => {
+        return "hello World" ;
+    }
+you can :        ****IMPLICIT RETURN****            //highly used in REACT 
+    let hello = () => "hello World" ; 
+it returns by-default / automatically.
+** you can wrap them in parentheses.
+eg) let hello = () => ("hello World") ; 
+
+*if you use braces{} , you have to use return keyword.
+
+*Arrow Function with Parameters :
+let hello = (val) => "hello" +val ; 
+also you can skip parentheses , if only one parameter -
+let hello = val => "hello" + val ;
+
+TO return OBJECT (IMPLICIT return) :   u have to use parenthese
+const obj = () => ({name : "hitesh"})
+conosle.log(obj())
+
+
+
+IIFE (Immediately Invoked FUNCTIONS Expressions) :
+this will immediately invokes function.
+in this , you have to use ";" to end the code run.
+
+1)named IFFE :                        using function expression
+(function chai(){       
+    console.log(`db connected `)
+})();
+
+2)unnamed IFFE :   (normal way)        using arrow function
+((name) => {
+    console.log(name)
+})('abc');          
+
+3)paramterized IFFE .(upper vich he deta)
+    execution vala parentheses vich he argument de dena.
+
+
+
+
+
+
+
+
