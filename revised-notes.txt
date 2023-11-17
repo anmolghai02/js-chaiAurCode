@@ -1,3 +1,0 @@
-How does JS works behind the scene?
-pdf .
-

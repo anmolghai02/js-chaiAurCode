@@ -1,0 +1,124 @@
+How does JS works behind the scene?
+pdf .
+
+CONTROL FLOW :
+
+=== , !== -> also check DT.
+
+if(2=="2"){
+    conosle.log("executed")
+}
+//will get executed.
+if(2==="2"){
+    console.log("executed")
+}
+//not executed.
+
+
+if(true){
+    var temp = "this is global";
+}
+console.log(temp) //accessible.
+var temp = 133 ;      //declared above , but still error free and value changed to 133.
+console.log(temp)
+
+
+IMPLICIT braces
+if(true) console.log("test")
+    o/p : test
+if(true) console.log("test"),console.log("test2");
+    o/p : test
+          test2
+
+
+TERNIARY OPERATOR
+conditon ? true : false
+
+
+
+SWITCH CASE
+syntax:
+    switch (key) {
+        case value  
+            break    
+        default :
+            break;
+    }
+eg)
+const month = 1
+switch(month){
+    case 1 :
+        console.log("JAN");
+        // break;
+    case 2 :
+        console.log("Feb");
+        break;
+    case 3 :
+        console.log("March");
+        break;
+    default :
+        console.log("Invalid");
+        break;
+}
+
+//Why Break?
+//if case is match , then after that all cases will execute. 
+//in above code o/p : JAN then Feb but at feb there will be break so stopped . Else it would not.
+
+//Cases in String dataType
+switch("march"){
+    case "Jan" :
+        console.log("January");
+        break;
+    case "Feb" :
+        console.log("Feburary");
+        break;
+    default :
+        console.log("Defualt");
+        break;
+} 
+
+TRUTHY FALSY :
+basic : could be asked in interview.
+some things are taken as the truth and some as false.
+
+const userEmail = "h@hitesh.ai"  //-> this is taken as TRUE 
+const userEmail = ""                // taken as false
+
+const userEmail = []            //taken as true
+
+if(userEmail){
+    console.log("Got user email");
+} else {
+    console.log("Don't have user email")
+}
+
+Notes :
+falsy Values : (those who are taken as false)
+    false , 0 , -0(just for interview) ,BigInt 0n , ""  , null , undefined , NaN
+truthy values : 
+    true , "0" , 'false'(or"" vich) , " " , [] , {} , function(){} (empty function) , 
+
+so 0 == false , etc true va
+
+w3schools ->chart hega
+
+
+
+
+
+Nullish Coalescing Operator (??) :  for null & undefined         //USEFULL 
+
+It is new operator , only made for null and undefined .
+It is used to assign value but avoid if they are null and undefined -> in that case preceding value will be assigned. 
+
+let val1 ;
+// val1 = 5 ?? 10   //if console.log -> o/p : 5
+// val1 = null ?? 10                //o/p : 10
+// val1 = undefined ?? 15           //o/p : 15
+val1 = null ?? 10 ?? 20             //o/p : 10
+
+it takes first value which is not null and undefined.
+*Use case : let function return diff value -> but to avoid taking value that are null and undefined. 
+
+
