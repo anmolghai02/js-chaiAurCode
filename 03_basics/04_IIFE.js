@@ -1,7 +1,7 @@
 //Immediately Invoked Function Expressions (IIFE)
 
-//with Iffe functions you have to use the ; .
-//to end the code run
+//with Iffe functions you have to use the ";". 
+//to end the code run.
 
 //named IFFE
 (function chai(){
@@ -14,7 +14,7 @@
     console.log(`DB connected 2 ${name}`)
 })('hitesh');     //with argument also.
 
-//parameterized IFFE
+//parameterized IFFE .(upper vich he deta)
 
 
 
