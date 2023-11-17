@@ -212,6 +212,13 @@ const obj3 = Object.assign({}, obj1 , obj2)
 const obj4 = {...obj1 , ...obj2}          //spread operator
 //same as the array
 
+Empty Object checking way :
+const emptyObj = {}
+//Object.keys(emptyObj) -> returns array of keys
+if(Object.keys(emptyObj).length === 0){
+    console.log("Object is empty");
+}
+
 
 DE-STRUCTURING OF OBJECT        - (will use in React) 
 const course = {
