@@ -31,6 +31,7 @@ function one(){     //nested function
 }
 one();
 
+
 //********INTERESTING ******/   //lil about hoisting
 function addone(num){
     return num+1
@@ -42,8 +43,6 @@ const addTwo = function(num){       //this is expression (function te hega he va
     return num+2; 
 }
 addTwo(5)              //see variable de nal va
-//if this call is declared above the function declaration -> it will not work .
-//error of no access before instiallization will come.
-
-//The concept that where function is stored , how declared , their execution context , 
+//if this call is declared above the function declaration -> error of no access 
+//The concept Hoisting that where function is stored , how declared , their execution context , 
 //varaible treatment , tree made by JS for varaible and function is called hoisting.
