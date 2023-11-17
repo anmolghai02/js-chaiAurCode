@@ -32,7 +32,7 @@ var temp = 133;  //brother upper declared c fer ve eh POSSIBLE and hun value 133
 console.log(temp)    //SERIOUS ISSUE MAN
 
 
-//IMPLICIT braces     //eh assi use nai krde but still yr mcq vich andde va vase cpp hunda oh pta nai baaki mai fer ve lekh reha
+//IMPLICIT braces     //eh assi use nai krde but still yr mcq vich andde va , vase cpp vich hunde oh , pta nai baaki mai fer ve lekh reha
 // if(true) console.log("test")
 //for multiple words
 // if(true) console.log("test"),console.log("test2");  //eh neeche ve lekh sakhda c
