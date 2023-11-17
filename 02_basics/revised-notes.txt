@@ -125,7 +125,15 @@ console.log(JsUser.greeting())  //will run the function
 JsUser.greeting2 = function(){
     console.log(`Hello JS user , ${this.name}`)         //this refers to the object 
 }
-this inside Object Method => refers to the Object.
+*this inside Object Method => refers to the Object.
+
+**With in object : we can write function
+synatx : const user = {
+            username : "hitesh",
+            welcome : function(){
+                //code
+            }
+         }
 
 
 Few Ways to declare OBJECT : 
