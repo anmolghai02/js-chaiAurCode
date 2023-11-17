@@ -1,4 +1,4 @@
-//BASIC : can get asked in interview
+//BASIC : could be asked in interview
 
 //some things are taken as the truth and some as false.
 // const userEmail = "h@hitesh.ai"  //-> this is taken as TRUE 
